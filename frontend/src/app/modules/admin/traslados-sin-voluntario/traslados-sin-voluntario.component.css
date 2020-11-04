@@ -1,0 +1,12 @@
+.text {
+  display: block;
+  width: 300px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.bg-notificar2{
+	background: #ffcbc9
+}

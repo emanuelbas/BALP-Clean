@@ -1,0 +1,77 @@
+{
+  "name": "Donante",
+  "base": "User",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "cuil": {
+      "type": "string",
+      "required": true
+    },
+    "totalDonado": {
+      "type": "number",
+      "required": true,
+      "default": 0
+    },
+    "totalDonadoEsteMes": {
+      "type": "number",
+      "required": true,
+      "default": 0
+    },
+    "puntuacion": {
+      "type": "number",
+      "required": true,
+      "default": 0
+    },
+    "tipoDeUsuario": {
+      "type": "string",
+      "default": "donante"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "personasDeContacto": {
+      "type": "hasMany",
+      "model": "PersonaDeContacto",
+      "foreignKey": "idDonante"
+    },
+    "ubicacion": {
+      "type": "hasOne",
+      "model": "Ubicacion",
+      "foreignKey": "idDonante"
+    },
+    "insignia": {
+      "type": "hasMany",
+      "model": "Insignia",
+      "foreignKey": "idDonante"
+    },
+    "donaciones": {
+      "type": "hasMany",
+      "model": "Donacion",
+      "foreignKey": "idDonante"
+    }
+  },
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "DENY"
+    },
+    {
+      "accessType": "READ",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW"
+    },
+    {
+      "accessType": "WRITE",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW"
+    }
+  ],
+  "methods": {}
+}

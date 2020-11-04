@@ -1,0 +1,51 @@
+{
+  "name": "EnvioParaBeneficiario",
+  "plural": "EnviosParaBeneficiario",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "tipo": {
+      "type": "string",
+      "required": true,
+      "default": "a partir de stock"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "beneficiario": {
+      "type": "belongsTo",
+      "model": "Beneficiario",
+      "foreignKey": ""
+    },
+    "volumen": {
+      "type": "hasOne",
+      "model": "Volumen",
+      "foreignKey": ""
+    },
+    "traslados": {
+      "type": "hasOne",
+      "model": "Traslado",
+      "foreignKey": "idEnvioTrasladadoAUnBeneficiario"
+    },
+    "donacion": {
+      "type": "hasOne",
+      "model": "Donacion",
+      "foreignKey": "idEnvio"
+    },
+    "productos": {
+      "type": "hasMany",
+      "model": "Producto",
+      "foreignKey": ""
+    },
+    "items": {
+      "type": "hasMany",
+      "model": "Item",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,92 @@
+{
+  "name": "Voluntario",
+  "base": "User",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "dni": {
+      "type": "number",
+      "required": true
+    },
+    "telefono": {
+      "type": "number",
+      "required": true
+    },
+    "nombre": {
+      "type": "string",
+      "required": true
+    },
+    "apellido": {
+      "type": "string",
+      "required": true
+    },
+    "distanciaMaxima": {
+      "type": "number"
+    },
+    "puntuacion": {
+      "type": "number",
+      "required": true,
+      "default": 0
+    },
+    "tipoDeUsuario": {
+      "type": "string",
+      "default": "voluntario"
+    },
+    "observaciones": {
+      "type": "string",
+      "required": true,
+      "default": " "
+    },
+    "tieneVehiculo": {
+      "type": "string",
+      "required": true,
+      "default": "no"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "ubicacion": {
+      "type": "hasOne",
+      "model": "Ubicacion",
+      "foreignKey": ""
+    },
+    "insignia": {
+      "type": "hasMany",
+      "model": "Insignia",
+      "foreignKey": ""
+    },
+    "vehiculo": {
+      "type": "hasOne",
+      "model": "Vehiculo",
+      "foreignKey": ""
+    },
+    "traslados": {
+      "type": "hasMany",
+      "model": "Traslado",
+      "foreignKey": ""
+    }
+  },
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "DENY"
+    },
+    {
+      "accessType": "READ",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW"
+    },
+    {
+      "accessType": "WRITE",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW"
+    }
+  ],
+  "methods": {}
+}

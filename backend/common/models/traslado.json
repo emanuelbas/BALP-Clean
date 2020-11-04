@@ -1,0 +1,67 @@
+{
+  "name": "Traslado",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "fechaAsignacion": {
+      "type": "date"
+    },
+    "fechaEstimada": {
+      "type": "date",
+      "required": true
+    },
+    "fechaVencimientoProductos": {
+      "type": "date",
+      "required": true,
+      "default": "December 17, 2003 03:24:00"
+    },
+    "fechaFin": {
+      "type": "date"
+    },
+    "estado": {
+      "type": "string",
+      "default": "pendiente de retiro"
+    },
+    "tipo": {
+      "type": "string"
+    },
+    "volumenTotal": {
+      "type": "number"
+    },
+    "puntaje": {
+      "type": "number"
+    },
+    "distancia": {
+      "type": "number"
+    },
+    "descripcion": {
+      "type": "string"
+    },
+    "peso": {
+      "type": "number"
+    },
+    "fechaVencimientoInvitacion": {
+      "type": "date",
+      "required": true,
+      "default": "December 17, 2003 03:24:00"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "enviosParaBeneficiario": {
+      "type": "hasOne",
+      "model": "envioParaBeneficiario",
+      "foreignKey": "idTraslado"
+    },
+    "envioAPartirDeDonacion": {
+      "type": "hasOne",
+      "model": "donacion",
+      "foreignKey": "idTrasladoQueLaIncluyeEnUnEnvio"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

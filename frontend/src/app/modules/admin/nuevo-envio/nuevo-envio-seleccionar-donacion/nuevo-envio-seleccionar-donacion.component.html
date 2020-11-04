@@ -1,0 +1,24 @@
+<table class="table mb-2">
+	<thead class="thead-gray sticky-top">
+		<tr>
+			<th>Descripción</th>
+			<th>Donante</th>
+			<th>Opciones</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr *ngFor="let donacion of donaciones">
+			<td>
+				<a *ngIf="donacion.filename != null" title="Abrir archivo adjunto" href="{{this.base}}/api/containers/container/download/{{donacion.filename}}"	[target]="_blank">📎</a>
+				{{donacion.traslado.descripcion}}
+			</td>
+			<td>
+				{{donacion.donante.username}}
+			</td>
+			<td>
+				<mat-radio-button color="primary" value="donacion.id" (click)="enviarAlPadre(donacion.id)">Seleccionar
+				</mat-radio-button>
+			</td>
+		</tr>
+	</tbody>
+</table>

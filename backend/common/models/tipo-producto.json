@@ -1,0 +1,30 @@
+{
+  "name": "TipoProducto",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "nombre": {
+      "type": "string",
+      "required": true
+    },
+    "codigoBarra": {
+      "type": "string"
+    },
+    "peso": {
+      "type": "number"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "categoria": {
+      "type": "belongsTo",
+      "model": "Categoria",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

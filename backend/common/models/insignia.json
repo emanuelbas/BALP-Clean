@@ -1,0 +1,28 @@
+{
+  "name": "Insignia",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "fechaOtorgada": {
+      "type": "date",
+      "required": true
+    },
+    "fechaVencimiento": {
+      "type": "date",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "tipoInsignia": {
+      "type": "belongsTo",
+      "model": "TipoInsignia",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

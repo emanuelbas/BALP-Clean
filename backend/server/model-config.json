@@ -1,0 +1,114 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "User": {
+    "dataSource": "mongo"
+  },
+  "AccessToken": {
+    "dataSource": "mongo",
+    "public": false
+  },
+  "ACL": {
+    "dataSource": "mongo",
+    "public": false
+  },
+  "RoleMapping": {
+    "dataSource": "mongo",
+    "public": false,
+    "options": {
+      "strictObjectIDCoercion": true
+    }
+  },
+  "Role": {
+    "dataSource": "mongo",
+    "public": false
+  },
+  "Donante": {
+    "dataSource": "mongo",
+    "public": true
+  },
+  "PersonaDeContacto": {
+    "dataSource": "mongo",
+    "public": true
+  },
+  "Ubicacion": {
+    "dataSource": "mongo",
+    "public": true
+  },
+  "Beneficiario": {
+    "dataSource": "mongo",
+    "public": true
+  },
+  "Voluntario": {
+    "dataSource": "mongo",
+    "public": true
+  },
+  "Insignia": {
+    "dataSource": "mongo",
+    "public": true
+  },
+  "Vehiculo": {
+    "dataSource": "mongo",
+    "public": true
+  },
+  "Traslado": {
+    "dataSource": "mongo",
+    "public": true
+  },
+  "Volumen": {
+    "dataSource": "mongo",
+    "public": true
+  },
+  "Donacion": {
+    "dataSource": "mongo",
+    "public": true
+  },
+  "EnvioParaBeneficiario": {
+    "dataSource": "mongo",
+    "public": true
+  },
+  "DescripcionGeneral": {
+    "dataSource": "mongo",
+    "public": true
+  },
+  "DescripcionDetallada": {
+    "dataSource": "mongo",
+    "public": true
+  },
+  "Producto": {
+    "dataSource": "mongo",
+    "public": true
+  },
+  "TipoProducto": {
+    "dataSource": "mongo",
+    "public": true
+  },
+  "Categoria": {
+    "dataSource": "mongo",
+    "public": true
+  },
+  "Item": {
+    "dataSource": "mongo",
+    "public": true
+  },
+  "TipoInsignia": {
+    "dataSource": "mongo",
+    "public": true
+  },
+  "container": {
+    "dataSource": "dataStorage",
+    "public": true
+  }
+}

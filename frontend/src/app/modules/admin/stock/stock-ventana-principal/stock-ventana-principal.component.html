@@ -1,0 +1,115 @@
+<section *ngIf="!(productoAEditar==undefined)" class="modal fade p-3 mb-5" id="modalFormEditProduct" tabindex="-1"
+	role="dialog" aria-labelledby="modalFormEditProduct" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title">Editar producto</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+
+			<form [formGroup]="form">
+				<div class="modal-body">
+					<div class="form-group">
+						<label for="nombre">Nombre</label><br>
+						<input class="form-control" type="text" formControlName="nombre" name="nombre" value="">
+						<div *ngIf="nombre.invalid && nombre.touched">
+							<small class="text-danger">Debe ingresar un nombre para el producto</small>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="cant">Cantidad</label><br>
+						<!-- Input int --->
+						<input class="form-control" type="number" min="0" formControlName="cant" name="cant" value="">
+						<div *ngIf="cant.invalid && cant.touched">
+							<small class="text-danger">Debe ingresar la cantidad de productos</small>
+						</div>
+					</div>
+				</div>
+
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+					<button class="btn btn-dark" data-dismiss="modal" (click)="submitProduct()"
+						[disabled]="!form.valid">Guardar</button>
+				</div>
+			</form>
+
+
+
+		</div>
+	</div>
+</section>
+
+<section class="modal fade p-3 mb-5" id="modalDeleteProduct" tabindex="-1" role="dialog"
+	aria-labelledby="modalDeleteProduct" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title">Eliminar producto</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+
+			<div class="modal-body">
+				<p>¿Esta seguro de que quiere borrar este producto?</p>
+			</div>
+
+			<div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+				<button class="btn btn-dark" data-dismiss="modal" (click)="borrarProducto()">Aceptar</button>
+			</div>
+
+		</div>
+	</div>
+</section>
+
+<div class="container border rounded ">
+	<table class="table text-center">
+		<thead class="thead-gray sticky-top">
+			<tr>
+				<th scope="col">Producto</th>
+				<th scope="col">Categoría</th>
+				<th scope="col">Cantidad</th>
+				<th scope="col">Vencimiento</th>
+				<th scope="col">Peso por unidad</th>
+				<th scope="col">Opciones</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr *ngFor="let producto of this.productosEnStock;let i=index">
+				<td>
+					{{producto.tipoProducto.nombre}}
+				</td>
+				<td>
+					{{producto.tipoProducto.categoria.nombre}}
+				</td>
+				<td>
+					{{producto.cantidad}}
+				</td>
+				<td>
+					{{producto.vencimiento| date: 'dd/MM/yyyy'}}
+				</td>
+				<td>
+					{{producto.tipoProducto.peso}}
+				</td>
+				<td class="d-flex justify-content-center">
+					<button type="button" class="btn btn-primary mx-1 p-1" data-toggle="modal" data-target="#modalFormEditProduct"
+						(click)="editarProducto(producto)">✏️</button>
+					<button type="button" class="btn btn-primary mx-1 p-1" data-toggle="modal" data-target="#modalDeleteProduct"
+						(click)="confirmBorrarProducto(producto.id)">🗑️</button>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<section class="card-footer text-center p-3 mt-4">
+		<button class="btn btn-outline-orange mr-2" (click)="this._location.back()">Volver</button>
+		<button type="button" class="btn btn-orange text-center mr-2" (click)="irAAgregarDonacion()"> Agregar
+			productos a partir de una donación </button>
+		<button type="button" class="btn btn-orange text-center mr" (click)="irAAgregarProducto()"> Agregar un
+			producto</button>
+	</section>
+</div>

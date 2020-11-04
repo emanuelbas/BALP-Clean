@@ -1,0 +1,558 @@
+/*! https://mths.be/utf8js v2.1.2 by @mathias */
+
+/**
+     * @method authenticate
+     * @author Jonathan Casarrubias <t: johncasarrubias, gh: mean-expert-official>
+     * @license MIT
+     * @param {string} url Server URL
+     * @param {Headers} headers HTTP Headers
+     * @return {void}
+     * @description
+     * This method will try to authenticate using either an access_token or basic http auth
+     */
+
+/**
+     * @method count
+     * @author Jonathan Casarrubias <t: johncasarrubias, gh: mean-expert-official>
+     * @license MIT
+     * @return {Observable<{ count: number }>}
+     * @description
+     * Generic count method
+     */
+
+/**
+     * @method create
+     * @author Jonathan Casarrubias <t: johncasarrubias, gh: mean-expert-official>
+     * @license MIT
+     * @param {T} data Generic data type
+     * @return {Observable<T>}
+     * @description
+     * Generic create method
+     */
+
+/**
+     * @method createChangeStream
+     * @author Jonathan Casarrubias <t: johncasarrubias, gh: mean-expert-official>
+     * @license MIT
+     * @return {Observable<any>}
+     * @description
+     * Generic createChangeStream method
+     */
+
+/**
+     * @method createMany
+     * @author Jonathan Casarrubias <t: johncasarrubias, gh: mean-expert-official>
+     * @license MIT
+     * @param {T[]} data Generic data type array
+     * @return {Observable<T[]>}
+     * @description
+     * Generic create many method
+     */
+
+/**
+     * @method deleteById
+     * @author Jonathan Casarrubias <t: johncasarrubias, gh: mean-expert-official>
+     * @license MIT
+     * @return {Observable<T>}
+     * @description
+     * Generic deleteById method
+     */
+
+/**
+     * @method exists
+     * @author Jonathan Casarrubias <t: johncasarrubias, gh: mean-expert-official>
+     * @license MIT
+     * @return {Observable<T[]>}
+     * @description
+     * Generic exists method
+     */
+
+/**
+     * @method find
+     * @author Jonathan Casarrubias <t: johncasarrubias, gh: mean-expert-official>
+     * @license MIT
+     * @return {Observable<T[+>}
+     * @description
+     * Generic find method
+     */
+
+/**
+     * @method findById
+     * @author Jonathan Casarrubias <t: johncasarrubias, gh: mean-expert-official>
+     * @license MIT
+     * @param {any} data Generic data type
+     * @return {Observable<T>}
+     * @description
+     * Generic findById method
+     */
+
+/**
+     * @method findOne
+     * @author Jonathan Casarrubias <t: johncasarrubias, gh: mean-expert-official>
+     * @license MIT
+     * @return {Observable<T>}
+     * @description
+     * Generic findOne method
+     */
+
+/**
+     * @method onCreate
+     * @author Jonathan Casarrubias <t: johncasarrubias, gh: mean-expert-official>
+     * @license MIT
+     * @param {T[]} data Generic data type array
+     * @return {Observable<T[]>}
+     * @description
+     * Generic pubsub oncreate many method
+     */
+
+/**
+     * @method onCreateMany
+     * @author Jonathan Casarrubias <t: johncasarrubias, gh: mean-expert-official>
+     * @license MIT
+     * @param {T[]} data Generic data type array
+     * @return {Observable<T[]>}
+     * @description
+     * Generic create many method
+     */
+
+/**
+     * @method onDeleteById
+     * @author Jonathan Casarrubias <t: johncasarrubias, gh: mean-expert-official>
+     * @license MIT
+     * @return {Observable<T>}
+     * @description
+     * Generic pubsub onDeleteById method
+     */
+
+/**
+     * @method onReplaceById
+     * @author Jonathan Casarrubias <t: johncasarrubias, gh: mean-expert-official>
+     * @license MIT
+     * @return {Observable<T>}
+     * @description
+     * Generic onReplaceById method
+     */
+
+/**
+     * @method onReplaceOrCreate
+     * @author Jonathan Casarrubias <t: johncasarrubias, gh: mean-expert-official>
+     * @license MIT
+     * @return {Observable<T>}
+     * @description
+     * Generic onReplaceOrCreate method
+     */
+
+/**
+     * @method onUpdateAll
+     * @author Jonathan Casarrubias <t: johncasarrubias, gh: mean-expert-official>
+     * @license MIT
+     * @return {Observable<T[]>}
+     * @description
+     * Generic pubsub onUpdateAll method
+     */
+
+/**
+     * @method onUpdateAttributes
+     * @author Jonathan Casarrubias <t: johncasarrubias, gh: mean-expert-official>
+     * @license MIT
+     * @return {Observable<T>}
+     * @description
+     * Generic onUpdateAttributes method
+     */
+
+/**
+     * @method onUpsert
+     * @author Jonathan Casarrubias <t: johncasarrubias, gh: mean-expert-official>
+     * @license MIT
+     * @return {Observable<T>}
+     * @description
+     * Generic pubsub onUpsert method
+     */
+
+/**
+     * @method onUpsertPatch
+     * @author Jonathan Casarrubias <t: johncasarrubias, gh: mean-expert-official>
+     * @license MIT
+     * @return {Observable<T>}
+     * @description
+     * Generic pubsub onUpsertPatch method using patch http method
+     */
+
+/**
+     * @method onUpsertWithWhere
+     * @author Jonathan Casarrubias <t: johncasarrubias, gh: mean-expert-official>
+     * @license MIT
+     * @return {Observable<T>}
+     * @description
+     * Generic pubsub onUpsertWithWhere method
+     */
+
+/**
+     * @method replaceById
+     * @author Jonathan Casarrubias <t: johncasarrubias, gh: mean-expert-official>
+     * @license MIT
+     * @return {Observable<T>}
+     * @description
+     * Generic replaceById method
+     */
+
+/**
+     * @method replaceOrCreate
+     * @author Jonathan Casarrubias <t: johncasarrubias, gh: mean-expert-official>
+     * @license MIT
+     * @return {Observable<T>}
+     * @description
+     * Generic replaceOrCreate method
+     */
+
+/**
+     * @method updateAll
+     * @author Jonathan Casarrubias <t: johncasarrubias, gh: mean-expert-official>
+     * @license MIT
+     * @return {Observable<T[]>}
+     * @description
+     * Generic updateAll method
+     */
+
+/**
+     * @method updateAttributes
+     * @author Jonathan Casarrubias <t: johncasarrubias, gh: mean-expert-official>
+     * @license MIT
+     * @return {Observable<T>}
+     * @description
+     * Generic updateAttributes method
+     */
+
+/**
+     * @method upsert
+     * @author Jonathan Casarrubias <t: johncasarrubias, gh: mean-expert-official>
+     * @license MIT
+     * @return {Observable<T>}
+     * @description
+     * Generic upsert method
+     */
+
+/**
+     * @method upsertPatch
+     * @author Jonathan Casarrubias <t: johncasarrubias, gh: mean-expert-official>
+     * @license MIT
+     * @return {Observable<T>}
+     * @description
+     * Generic upsert method using patch http method
+     */
+
+/**
+     * @method upsertWithWhere
+     * @author Jonathan Casarrubias <t: johncasarrubias, gh: mean-expert-official>
+     * @license MIT
+     * @return {Observable<T>}
+     * @description
+     * Generic upsertWithWhere method
+     */
+
+/**
+    * @method factory
+    * @author Jonathan Casarrubias
+    * @license MIT
+    * This method creates an instance of Beneficiario for dynamic purposes.
+    **/
+
+/**
+    * @method factory
+    * @author Jonathan Casarrubias
+    * @license MIT
+    * This method creates an instance of Categoria for dynamic purposes.
+    **/
+
+/**
+    * @method factory
+    * @author Jonathan Casarrubias
+    * @license MIT
+    * This method creates an instance of Container for dynamic purposes.
+    **/
+
+/**
+    * @method factory
+    * @author Jonathan Casarrubias
+    * @license MIT
+    * This method creates an instance of DescripcionDetallada for dynamic purposes.
+    **/
+
+/**
+    * @method factory
+    * @author Jonathan Casarrubias
+    * @license MIT
+    * This method creates an instance of DescripcionGeneral for dynamic purposes.
+    **/
+
+/**
+    * @method factory
+    * @author Jonathan Casarrubias
+    * @license MIT
+    * This method creates an instance of Donacion for dynamic purposes.
+    **/
+
+/**
+    * @method factory
+    * @author Jonathan Casarrubias
+    * @license MIT
+    * This method creates an instance of Donante for dynamic purposes.
+    **/
+
+/**
+    * @method factory
+    * @author Jonathan Casarrubias
+    * @license MIT
+    * This method creates an instance of EnvioParaBeneficiario for dynamic purposes.
+    **/
+
+/**
+    * @method factory
+    * @author Jonathan Casarrubias
+    * @license MIT
+    * This method creates an instance of Insignia for dynamic purposes.
+    **/
+
+/**
+    * @method factory
+    * @author Jonathan Casarrubias
+    * @license MIT
+    * This method creates an instance of Item for dynamic purposes.
+    **/
+
+/**
+    * @method factory
+    * @author Jonathan Casarrubias
+    * @license MIT
+    * This method creates an instance of PersonaDeContacto for dynamic purposes.
+    **/
+
+/**
+    * @method factory
+    * @author Jonathan Casarrubias
+    * @license MIT
+    * This method creates an instance of Producto for dynamic purposes.
+    **/
+
+/**
+    * @method factory
+    * @author Jonathan Casarrubias
+    * @license MIT
+    * This method creates an instance of TipoInsignia for dynamic purposes.
+    **/
+
+/**
+    * @method factory
+    * @author Jonathan Casarrubias
+    * @license MIT
+    * This method creates an instance of TipoProducto for dynamic purposes.
+    **/
+
+/**
+    * @method factory
+    * @author Jonathan Casarrubias
+    * @license MIT
+    * This method creates an instance of Traslado for dynamic purposes.
+    **/
+
+/**
+    * @method factory
+    * @author Jonathan Casarrubias
+    * @license MIT
+    * This method creates an instance of Ubicacion for dynamic purposes.
+    **/
+
+/**
+    * @method factory
+    * @author Jonathan Casarrubias
+    * @license MIT
+    * This method creates an instance of User for dynamic purposes.
+    **/
+
+/**
+    * @method factory
+    * @author Jonathan Casarrubias
+    * @license MIT
+    * This method creates an instance of Vehiculo for dynamic purposes.
+    **/
+
+/**
+    * @method factory
+    * @author Jonathan Casarrubias
+    * @license MIT
+    * This method creates an instance of Volumen for dynamic purposes.
+    **/
+
+/**
+    * @method factory
+    * @author Jonathan Casarrubias
+    * @license MIT
+    * This method creates an instance of Voluntario for dynamic purposes.
+    **/
+
+/**
+    * @method getModelDefinition
+    * @author Julien Ledun
+    * @license MIT
+    * This method returns an object that represents some of the model
+    * definitions.
+    **/
+
+/**
+ * @class FireLoopRef<T>
+ * @author Jonathan Casarrubias <t: johncasarrubias, gh: mean-expert-official>
+ * @license MIT
+ * @description
+ * This class allows to create FireLoop References which will be in sync with
+ * Server. It also allows to create FireLoop Reference Childs, that allows to
+ * persist data according the generic model relationships.
+ **/
+
+/**
+ * @license
+ * Copyright Google Inc. All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ * @param {?} cb
+ * @return {?}
+ */
+
+/**
+ * @license
+ * Copyright Google Inc. All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ * @type {?}
+ */
+
+/**
+ * @license
+ * Copyright Google Inc. All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+
+/**
+ * @license
+ * Copyright Google LLC All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+
+/**
+ * @license Angular v8.2.14
+ * (c) 2010-2019 Google LLC. https://angular.io/
+ * License: MIT
+ */
+
+/**
+ * @module InternalStorage
+ * @author Jonathan Casarrubias <t: johncasarrubias, gh: mean-expert-official>
+ * @license MIT
+ * @description
+ * The InternalStorage class is used for dependency injection swapping.
+ * It will be provided using factory method from different sources.
+ * This is mainly required because Angular Universal integration.
+ * It does inject a CookieStorage instead of LocalStorage.
+ **/
+
+/**
+ * @module SDKStorage
+ * @author Jonathan Casarrubias <t: johncasarrubias, gh: mean-expert-official>
+ * @license MIT
+ * @description
+ * The SDKStorage class is used for dependency injection swapping.
+ * It will be provided using factory method according the right environment.
+ * This is created for public usage, to allow persisting custom data
+ * Into the local storage API.
+ **/
+
+/**
+ * @module SocketDriver
+ * @author Jonathan Casarrubias <t: johncasarrubias, gh: mean-expert-official>
+ * @license MIT
+ * @description
+ * The SocketDriver class is used for dependency injection swapping.
+ * It will be provided using factory method from different sources.
+ **/
+
+/**
+ * @module Storage
+ * @author Jonathan Casarrubias <t: johncasarrubias, gh: mean-expert-official>
+ * @license MIT
+ * @description
+ * The InternalStorage class is used for dependency injection swapping.
+ * It will be provided using factory method from different sources.
+ **/
+
+/**
+* @author Jonathan Casarrubias <twitter:@johncasarrubias> <github:@johncasarrubias>
+* @module LoggerService
+* @license MIT
+* @description
+* Console Log wrapper that can be disabled in production mode
+**/
+
+/**
+* @author Jonathan Casarrubias <twitter:@johncasarrubias> <github:@johncasarrubias>
+* @module RealTime
+* @license MIT
+* @description
+* This module is a real-time interface for using socket connections, its main purpose
+* is to make sure that when there is a valid connection, it will create instances
+* of the different real-time functionalities like FireLoop, PubSub and IO.
+**/
+
+/**
+* @author Jonathan Casarrubias <twitter:@johncasarrubias> <github:@mean-expert-official>
+* @module CookieBrowser
+* @license MIT
+* @description
+* This module handle cookies, it will be provided using DI Swapping according the
+* SDK Socket Driver Available currently supporting Angular 2 for web and NativeScript 2.
+**/
+
+/**
+* @author Jonathan Casarrubias <twitter:@johncasarrubias> <github:@mean-expert-official>
+* @module SocketBrowser
+* @license MIT
+* @description
+* This module handle socket connections for web browsers, it will be DI Swapped
+* depending on the platform environment.
+* This module will be generated when the -d ng2web flag is set
+**/
+
+/**
+* @author Jonathan Casarrubias <twitter:@johncasarrubias> <github:@mean-expert-official>
+* @module SocketConnection
+* @license MIT
+* @description
+* This module handle socket connections and return singleton instances for each
+* connection, it will use the SDK Socket Driver Available currently supporting
+* Angular 2 for web, NativeScript 2 and Angular Universal.
+**/
+
+/**
+* @author Jonathan Casarrubias <twitter:@johncasarrubias> <github:@mean-expert-official>
+* @module StorageBrowser
+* @license MIT
+* @description
+* This module handle localStorage, it will be provided using DI Swapping according the
+* SDK Socket Driver Available currently supporting Angular 2 for web and NativeScript 2.
+**/
+
+/**
+* @module BaseLoopBackApi
+* @author Jonathan Casarrubias <@johncasarrubias> <github:jonathan-casarrubias>
+* @author Nikolay Matiushenkov <https://github.com/mnvx>
+* @license MIT
+* @description
+* Abstract class that will be implemented in every custom service automatically built
+* by the sdk builder.
+* It provides the core functionallity for every API call, either by HTTP Calls or by
+* WebSockets.
+**/

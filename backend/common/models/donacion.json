@@ -1,0 +1,80 @@
+{
+  "name": "Donacion",
+  "plural": "donaciones",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "fechaRegistro": {
+      "type": "date",
+      "required": true,
+      "default": "$now"
+    },
+    "numero": {
+      "type": "number",
+      "required": true,
+      "unique": true
+    },
+    "estado": {
+      "type": "string",
+      "required": true
+    },
+    "tipoDescripcion": {
+      "type": "string"
+    },
+    "filename": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "descripcionDetallada": {
+      "type": "hasOne",
+      "model": "DescripcionDetallada",
+      "foreignKey": "idDonacion"
+    },
+    "volumen": {
+      "type": "hasOne",
+      "model": "Volumen",
+      "foreignKey": "idDonacion"
+    },
+    "descripcionGeneral": {
+      "type": "hasOne",
+      "model": "DescripcionGeneral",
+      "foreignKey": "idDonacion"
+    },
+    "traslado": {
+      "type": "hasOne",
+      "model": "Traslado",
+      "foreignKey": "idDonacionTrasladadaAlBanco"
+    },
+    "donante": {
+      "type": "belongsTo",
+      "model": "Donante",
+      "foreignKey": "idDonante"
+    }
+  },
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "DENY"
+    },
+    {
+      "accessType": "READ",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW"
+    },
+    {
+      "accessType": "WRITE",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW"
+    }
+  ],
+  "methods": {}
+}
